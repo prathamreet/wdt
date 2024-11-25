@@ -49,7 +49,7 @@ body {
 }
 
 .product img {
-    width: 100px; /* Make product images smaller */
+    width: 100px;
     height: 100px;
     object-fit: cover;
     margin-bottom: 10px;

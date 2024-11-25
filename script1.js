@@ -1,6 +1,5 @@
 let cart = [];
 
-// Fetch product data from JSON
 async function fetchProducts() {
     try {
         const response = await fetch("./data/products.json");
@@ -11,7 +10,6 @@ async function fetchProducts() {
     }
 }
 
-// Dynamically render products in the shop
 function renderProducts(products) {
     const productsContainer = document.getElementById("products");
     productsContainer.innerHTML = `
@@ -25,7 +23,7 @@ function renderProducts(products) {
               }" data-price="${product.price}">
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p>$${product.price.toFixed(2)}</p>
+            <p>₹${product.price.toFixed(2)}</p>
             <button class="add-to-cart">Add to Cart</button>
           </div>
         `
@@ -34,7 +32,6 @@ function renderProducts(products) {
     </div>
   `;
 
-    // Add event listeners to "Add to Cart" buttons
     document.querySelectorAll(".add-to-cart").forEach((button) => {
         button.addEventListener("click", () => {
             const productElement = button.closest(".product");
@@ -54,7 +51,6 @@ function renderProducts(products) {
     });
 }
 
-// Update cart display
 function updateCart() {
     const cartItemsContainer = document.getElementById("cart-items");
     cartItemsContainer.innerHTML = "";
@@ -67,7 +63,7 @@ function updateCart() {
         cartItem.className = "cart-item";
         cartItem.innerHTML = `
       <span>${item.name} (x${item.quantity})</span>
-      <span>$${(item.price * item.quantity).toFixed(2)}</span>
+      <span>₹${(item.price * item.quantity).toFixed(2)}</span>
       <button onclick="removeFromCart('${item.id}')">Remove</button>
     `;
         cartItemsContainer.appendChild(cartItem);
@@ -75,10 +71,9 @@ function updateCart() {
 
     document.getElementById(
         "total-price"
-    ).textContent = `Total: $${total.toFixed(2)}`;
+    ).textContent = `Total: ₹${total.toFixed(2)}`;
 }
 
-// Remove item from cart
 function removeFromCart(id) {
     const itemIndex = cart.findIndex((item) => item.id === id);
     if (itemIndex > -1) {
@@ -88,13 +83,10 @@ function removeFromCart(id) {
     updateCart();
 }
 
-// Clear cart
 document.getElementById("clear-cart").addEventListener("click", () => {
     cart.length = 0;
     updateCart();
 });
 
 
-
-// Load products on page load
 fetchProducts();

@@ -1,4 +1,3 @@
-// Handle Checkout Button Click
 document.getElementById("checkout").addEventListener("click", () => {
     if (cart.length === 0) {
         alert("Your cart is empty!");
@@ -71,16 +70,16 @@ document.getElementById("checkout").addEventListener("click", () => {
                      (item) => `
                <tr>
                  <td>${item.name}</td>
-                 <td>$${item.price.toFixed(2)}</td>
+                 <td>₹${item.price.toFixed(2)}</td>
                  <td>${item.quantity}</td>
-                 <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                 <td>₹${(item.price * item.quantity).toFixed(2)}</td>
                </tr>
              `
                  )
                  .join("")}
              <tr class="total-row">
                <td colspan="3">Grand Total</td>
-               <td>$${cart
+               <td>₹${cart
                    .reduce((acc, item) => acc + item.price * item.quantity, 0)
                    .toFixed(2)}</td>
              </tr>
