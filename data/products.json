@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "T-shirt 1 (Classic Fit)",
+        "price": 499,
+        "image": "./media/product/1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "T-shirt 2 (Urban Style)",
+        "price": 799,
+        "image": "./media/product/2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "T-shirt 3 (Casual Wear)",
+        "price": 599,
+        "image": "./media/product/3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "T-shirt 4 (Vintage Vibes)",
+        "price": 699,
+        "image": "./media/product/4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "T-shirt 5 (Modern Fit)",
+        "price": 899,
+        "image": "./media/product/5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "T-shirt 6 (Graphic Tee)",
+        "price": 499,
+        "image": "./media/product/6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "T-shirt 7 (Athletic Cut)",
+        "price": 750,
+        "image": "./media/product/7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "T-shirt 8 (Minimalist Design)",
+        "price": 850,
+        "image": "./media/product/8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "T-shirt 9 (Relaxed Fit)",
+        "price": 400,
+        "image": "./media/product/9.jpg"
+    }
+]
